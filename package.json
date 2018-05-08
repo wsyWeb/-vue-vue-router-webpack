@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animejs": "^2.2.0",
     "iview": "^2.13.1",
     "sass-loader": "^6.0.7",
     "vue": "^2.5.2",
