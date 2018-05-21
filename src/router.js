@@ -1,6 +1,11 @@
 import VueRouter from 'vue-router'
 const routes =  new VueRouter({
-  routes: [{
+  routes: [
+  {
+    path: '/',
+    component: require('./components/Dashboard.vue').default
+  },
+  {
     path: '/about',
     component: require('./components/Index.vue').default
   }]
