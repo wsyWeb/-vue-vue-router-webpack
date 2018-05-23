@@ -4,3 +4,7 @@
 还要引入file-loader
 3、引入路由的命名要规范，直接写入为router或者 router： xxx，不然不能识别
 4、路由中导入相应模块时，要么引入文件时应用import，如用require，则要在文件后加上.default。具体原因可能是vue-loader的解析问题。推荐文章（http://www.cnblogs.com/CyLee/p/5836069.html）
+启动项目
+npm install
+npm start
+npm run dev
