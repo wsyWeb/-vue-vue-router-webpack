@@ -1,6 +1,7 @@
 <template>
 	<div id="Dashboard">
-		<h1>welcome</h1>
+		<h1 class="h1">welcome ann's home</h1>
+		<Button type="warning" class="btn" @click="turnInAbout">click me</Button>
 	</div>
 </template>
 <style lang="scss">
@@ -9,13 +10,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
     background: #18212D;
     h1 {
-    	color: red
+    	color: red;
+    	font-size: 100px;
+    	width: 100%;
+    	top: 15%;
+    	text-align: center;
     }
+	}
+	.btn {
 	}
 	div.cricle {
     /*position: absolute;*/
@@ -39,8 +47,12 @@
 			})
 		},
 		methods: {
+			turnInAbout() {
+				this.$router.push({
+					path: '/about'
+				})
+			},
 			setAnimation() {
-				console.log(document.getElementById('Dashboard'))
 				const maxElements = 200
 				const duration = 10000
 				let toAnimate = []
@@ -75,6 +87,14 @@
 				}
 
 				toAnimate.forEach(animate)
+				anime({
+		      targets: '.h1',
+		      color: '#000',
+		      duration: 5000,
+		      loop: true,
+		      direction: 'alternate',
+		      easing: 'easeOutQuad'
+		    })
 			}
 		}
 	}

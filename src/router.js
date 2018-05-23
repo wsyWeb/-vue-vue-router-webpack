@@ -7,7 +7,7 @@ const routes =  new VueRouter({
   },
   {
     path: '/about',
-    component: require('./components/Index.vue').default
+    component: require('./components/About.vue').default
   }]
 })
 

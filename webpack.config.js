@@ -32,6 +32,10 @@ module.exports= {
 				use: ['style-loader', 'css-loader', 'sass-loader']
 			},
 			{
+				test: /\.less$/,
+				use: ['style-loader', 'css-loader', 'less-loader']
+			},
+			{
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -44,8 +48,18 @@ module.exports= {
       {
         test: /.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
-      }
+        exclude: /node_modules/,
+        query: {
+		      presets: ['es2015']
+		    }
+      },
+      {
+			  test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+			  loader: 'url-loader',
+			  options: {
+			  	limit: 100000
+			  }
+			}
 		]
 	},
 	plugins: [
